@@ -1,0 +1,226 @@
+:root {
+    --nav-bg-color:rgb(67, 67, 67);
+    --nav-bg-color-light :rgb(92, 92, 92);
+    --nav-shadow:rgba(0, 0, 0, 0.35) 0px 3px 5px 1px;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 1000000000000;
+}
+
+nav {
+    background-color: var(--nav-bg-color);
+    width: 100%;
+    padding: 30px;
+    box-shadow: var(--nav-shadow);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+}
+
+nav ul li {
+    display: flex;
+    list-style:none;
+    /* transition: transform .3s ease-in; */
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: fit-content;
+}
+
+nav ul li:hover {
+    /* transform: scale(1.1); */
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    padding: 5px 0px;
+    font-size: 18px;
+}
+
+nav ul li a::after {
+    content: "";
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 3px;
+    width: 100%;
+    display: block;
+    transform: translateX(-100%);
+    transition: all .3s ease-out;
+    border-radius: 20qapx;
+}
+
+nav ul li a:hover::after {
+    transform: translateX(0);
+}
+#categorias {
+    background-color: rgb(202, 202, 202);
+    cursor: pointer;
+    height: 100%;
+    border: none;
+    text-align: center;
+    padding: 0.25em 0.5em;
+    line-height: 1.1;
+    transition: width .1s ease-in;
+}
+
+#categorias:hover {
+    background-color: rgb(148, 146, 146);
+}
+
+#categorias:focus {
+}
+
+#categorias-li {
+    justify-content: flex-end;
+}
+
+#search-container {
+    width: 50%;
+}
+
+.search-bar-container {
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+    background-color: white;
+    height: 35px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.search-bar-container:focus-within {
+    outline: 2px solid rgb(72, 91, 216);
+}
+
+.search-bar {
+    height: 25px;
+    width: 100%;
+    border: none;
+    padding: 5px;
+}
+
+.search-bar:focus-within {
+    outline: none;
+}
+
+.search-btn {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-left: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-icon {
+    /* background-color: white; */
+    height: 25px;
+}
+
+.header-items-container {
+    display: flex;
+    width: 25%;
+    justify-content: space-around;
+}
+
+.cart-icon {
+    width: 30px;
+}
+
+.responsive-nav-container {
+    display: none;
+}
+
+
+@media screen and (max-width:875px) {   
+    #titulo {
+        display: none;
+    }
+
+    .header-items-container {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:600px) {   
+    .responsive-nav-container {
+        display: block;
+        width: 35px;
+        cursor: pointer;
+    }
+
+    nav {
+        position: relative;
+        padding: 15px 0px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0px;
+    }
+
+
+    #search-container {
+        grid-area: barra;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .header-items-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0px;
+        transform: translateX(-100%);
+        transition: transform .3s ease-in;
+        background-color: var(--nav-bg-color-light);
+        padding: 10px;
+        border-top: 1px solid black;
+    }
+
+    .active {
+        transform: translateX(0%);
+    }
+
+    .search-btn {
+        display: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .search-icon {
+        height: 20px;
+    }
+
+    #categorias {
+        background-color: rgb(202, 202, 202);
+        cursor: pointer;
+        border: none;
+        text-align: center;
+        line-height: .5;
+        font-size: 12px;
+        padding: 0px;
+        transition: width .1s ease-in;
+    }
+}

@@ -1,0 +1,78 @@
+.metodos-container {
+    display: flex;
+    margin: 20px auto 0px auto;
+    background-color: white;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    justify-content: space-between;
+}
+
+.metodo {
+    padding: 20px;
+    display: flex;
+}
+
+#more-methods {
+    border-left: 1px solid rgb(82, 81, 81);
+}
+
+.metodo-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.metodo-info {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.metodo-info a {
+    text-decoration: none;
+    color: rgb(78, 130, 209);
+}
+
+.metodo-info a:hover {
+    color: rgb(46, 96, 170);
+}
+
+@media screen and (max-width:1200px) {
+    #efectivo-method {
+        display: none;
+    }
+}
+
+@media screen and (max-width:875px) {
+
+    .metodos-container{
+        width: 95%;
+    }
+
+    .metodo-info{
+        font-size: 13px;
+
+    }
+    #sintarjeta-method {
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .metodo {
+        padding: 10px;
+    }
+
+    .metodo-info{
+        font-size: 12px;
+
+    }
+    #debito-method {
+        display: none;
+    }
+}
