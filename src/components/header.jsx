@@ -1,4 +1,5 @@
 import './header.css'
+import {ReactComponent as CarritoLogo} from '../svgs/cart.svg'
 
 const Header = () => {
     return (
@@ -11,7 +12,7 @@ const Header = () => {
                     </li>
                     <li id="search-container">
                     <div className="responsive-nav-container">
-                        <img src="svgs/bars-solid.svg" alt=""/>
+                        <img src={require("../svgs/bars-solid.svg")} alt=""/>
                     </div>
                     <div className="search-bar-container">
                         <select name="categorias" id="categorias">
@@ -24,14 +25,14 @@ const Header = () => {
                         </select>
                         <input className="search-bar" type="text"/>
                         <button className="search-btn">
-                            <img src="svgs/magnifying-glass-solid.svg" className="search-icon" alt=""/>
+                            <img src={require('../svgs/magnifying-glass-solid.svg')} className="search-icon" alt=""/>
                         </button>
                     </div>
                 </li>
                 <div className="header-items-container">
                     <li id="inicio"><a href="#">Inicio</a></li>
                     <li id="ingresar"><a href="htmls/ingresar.html">Ingresar</a></li>
-                    <li id="carrito"><a href="htmls/carrito.html"><img src="svgs/cart.svg" className="cart-icon" alt=""/></a>
+                    <li id="carrito"><a href="htmls/carrito.html"><CarritoLogo className='caret-icon'/></a>
                     </li>
                 </div>
                 </ul>
