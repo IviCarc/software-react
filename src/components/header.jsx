@@ -1,5 +1,6 @@
 import './header.css'
 import {ReactComponent as CarritoLogo} from '../svgs/cart.svg'
+import {ReactComponent as BusquedaLogo} from '../svgs/magnifying-glass-solid.svg'
 
 const Header = () => {
     return (
@@ -25,7 +26,7 @@ const Header = () => {
                         </select>
                         <input className="search-bar" type="text"/>
                         <button className="search-btn">
-                            <img src={require('../svgs/magnifying-glass-solid.svg')} className="search-icon" alt=""/>
+                            <BusquedaLogo />
                         </button>
                     </div>
                 </li>
