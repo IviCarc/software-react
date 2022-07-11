@@ -6,19 +6,19 @@ const Header = () => {
 
     // TAMAÑO DEL SELECT CATEGORÍAS
 
-    let select = document.getElementById('categorias');
-    let optionsEl = document.querySelectorAll('.cat-opcion');
+    // let select = document.getElementById('categorias');
+    // let optionsEl = document.querySelectorAll('.cat-opcion');
 
-    let selectedOpt = optionsEl[select.selectedIndex];
-    let optionLength = selectedOpt.textContent.length * parseInt(window.getComputedStyle(selectedOpt).fontSize.slice(0, 7)) + 20
-    select.style.width = `${optionLength}px`
+    // let selectedOpt = optionsEl[select.selectedIndex];
+    // let optionLength = selectedOpt.textContent.length * parseInt(window.getComputedStyle(selectedOpt).fontSize.slice(0, 7)) + 20
+    // select.style.width = `${optionLength}px`
 
-    select.addEventListener('click', () => {
-        let selectedOpt = optionsEl[select.selectedIndex];
-        let optionLength = selectedOpt.textContent.length * parseInt(window.getComputedStyle(selectedOpt).fontSize.slice(0, 7)) + 20
-        console.log(optionLength)
-        select.style.width = `${optionLength}px`
-    })
+    // select.addEventListener('click', () => {
+    //     let selectedOpt = optionsEl[select.selectedIndex];
+    //     let optionLength = selectedOpt.textContent.length * parseInt(window.getComputedStyle(selectedOpt).fontSize.slice(0, 7)) + 20
+    //     console.log(optionLength)
+    //     select.style.width = `${optionLength}px`
+    // })
 
     return (
 
@@ -34,7 +34,7 @@ const Header = () => {
                         </div>
                         <div className="search-bar-container">
                             <select name="categorias" id="categorias">
-                                <option className="cat-opcion" value="Todo" selected>Todo</option>
+                                <option className="cat-opcion" value="Todo" defaultValue>Todo</option>
                                 <option className="cat-opcion" value="Monitores">Monitores</option>
                                 <option className="cat-opcion" value="Mouse">Mouse</option>
                                 <option className="cat-opcion" value="Teclado">Teclado</option>

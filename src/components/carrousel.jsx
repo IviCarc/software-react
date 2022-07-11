@@ -8,7 +8,7 @@ import {ReactComponent as CarritoLogo} from '../svgs/cart.svg'
 const Carrousel = () => {
 
     return (
-        <SimpleSlider > 
+        <SimpleSlider dotsclass='carrousel-btns' ulclass='carrousel-ul' autoplay={true} slidestoshow={1} slidestoscroll={1}> 
          <a href="#"><img className="carrousel-img" src={require('../imgs/chartgrande.webp')} alt=""/></a>
          <a href="#"><img className="carrousel-img" src={require('../imgs/chartgrande2.webp')} alt=""/></a>
          <a href="#"><img className="carrousel-img" src={require('../imgs/chartgrande3.webp')} alt=""/></a>

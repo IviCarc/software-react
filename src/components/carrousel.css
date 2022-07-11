@@ -3,7 +3,8 @@
 }
 
 .caret-icon {
-    width: 40px;
+    width: 80px;
+    height: 80px;
     z-index: 10000;
     position: absolute;
     top: 50%;
@@ -11,6 +12,7 @@
     cursor: pointer;
     transition: fill .1s;
     fill: rgb(0, 0, 0);
+    box-sizing: border-box;
 }
 
 .caret-icon:hover {
@@ -25,12 +27,45 @@
     left: 3%;
 }
 
+.slick-btn {
+    background-color: red !important;
+}
+
 .slick-btn:hover {
     background-color: rgb(164, 163, 163) !important;
 }
 
-.slick-active div {
-    background-color: rgb(116, 116, 116) !important;
+.carrousel-ul {
+    display: flex;
+    width: fit-content;
+    left: 50%;
+    bottom: -10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    gap: 5px;
+}
+
+.carrousel-ul li {
+    list-style: none;
+}
+
+.carrousel-btns {
+    background-color: black ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px ;
+    height: 20px ;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.carrousel-btns:hover {
+    background-color: #ccc ;
+}
+
+.slick-active .carrousel-btns{
+    background-color: rgb(110, 110, 110);    
 }
 
 @media screen and (max-width:650px) {

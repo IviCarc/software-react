@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+.productos-seccion {
+    margin: 50px auto;
+    width: 90%;
+}
+
+.categoria-titulo-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.categoria-titulo {
+    padding: 0px;
+    margin: 0px;
+}
+
+.categoria-titulo-container a {
+    text-decoration: none;
+    color: rgb(78, 130, 209);
+    margin-left: 10px;
+}
+
+.categoria-titulo-container a:hover {
+    color: rgb(46, 96, 170);
+}
+
+.cards-slider-ul {
+    display: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.card:hover .card-hover-info {
+    background-color: rgba(0, 0, 0, 0.559);
+    visibility: visible;
+}
+
+.card-hover-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    /* transform: translate(-50%, -50%); */
+    visibility: hidden;
+    transition: visibility .3s, background-color .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover .card-hover-info p {
+    display: block;
+}
+
+.card-hover-info p {
+    width: 80%;
+    color: white;
+    display: none;
+}
+
+.slider-cards {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.card-img-container {
+    height: 200px;
+    border-bottom: 1px solid black;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.card-info-container h3 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cards-arrow {
+    background-color: #ccc;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}
+
+.cards-next-arrow {
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.cards-prev-arrow {
+    left: 0;
+    transform: translate(-50%, -50%);
+    
+}
