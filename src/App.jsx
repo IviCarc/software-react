@@ -4,17 +4,16 @@ import Footer from './components/footer';
 import Metodos from './components/metodos';
 import Carrousel from './components/carrousel';
 import Productos from './components/productos-seccion';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 function App() {  
   return (
-    <div className="App">
-      <Header/>
-      <Carrousel />
-      <Metodos/>
-      <Productos />
-      <Footer/>
-    </div>
+      <div className="App">
+        <Carrousel />
+        <Metodos/>
+        <Productos />
+      </div>
   );
 }
 

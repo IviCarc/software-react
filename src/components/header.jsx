@@ -1,6 +1,7 @@
 import './header.css'
-import { ReactComponent as CarritoLogo } from '../svgs/cart.svg'
-import { ReactComponent as BusquedaLogo } from '../svgs/magnifying-glass-solid.svg'
+import { ReactComponent as CarritoLogo } from '../svgs/cart.svg';
+import { ReactComponent as BusquedaLogo } from '../svgs/magnifying-glass-solid.svg';
+import {Link} from 'react-router-dom';
 
 const Header = () => {
 
@@ -26,7 +27,7 @@ const Header = () => {
             <nav>
                 <ul>
                     <li id='titulo'>
-                        <a href="#"> <h1>IvitoShop</h1></a>
+                        <Link to={'/'}> <h1>IvitoShop</h1></Link>
                     </li>
                     <li id="search-container">
                         <div className="responsive-nav-container">
@@ -48,9 +49,9 @@ const Header = () => {
                         </div>
                     </li>
                     <div className="header-items-container">
-                        <li id="inicio"><a href="#">Inicio</a></li>
-                        <li id="ingresar"><a href="htmls/ingresar.html">Ingresar</a></li>
-                        <li id="carrito"><a href="htmls/carrito.html"><CarritoLogo className='cart-icon' /></a>
+                        <li id="inicio"><Link to={'/'}>Inicio</Link></li>
+                        <li id="ingresar"><Link to="htmls/ingresar.html">Ingresar</Link></li>
+                        <li id="carrito"><Link to="htmls/carrito.html"><CarritoLogo className='cart-icon' /></Link>
                         </li>
                     </div>
                 </ul>

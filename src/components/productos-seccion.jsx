@@ -68,9 +68,9 @@ const Productos = () => {
     
     return (
         <div className='productos-seccion'>
-            {productos && productos.map(categorias => {
+            {productos && productos.map(categorias => { 
                 return (
-                    <div>
+                    <div className='categoria-container'>
                         <div className='categoria-titulo-container'>
                             <h3 className='categoria-titulo'>{categorias['categoria']}</h3>
                             <a href="#">Ver más</a>
