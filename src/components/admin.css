@@ -1,0 +1,45 @@
+.admin-page {
+    margin: 40px auto;
+    width:70%;
+    padding: 10px;
+    background-color: aliceblue;
+}
+
+.new-product-form {
+    margin :10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:10px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.send-btn {
+    margin:  auto;
+    display: block;
+    width: fit-content;
+    background-color: rgba(81, 90, 215, 0.876);
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius:20px ;
+    cursor: pointer;
+
+}
+
+.select-div {
+    margin:5px auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+.select-mode-btn {
+    cursor: pointer;
+}

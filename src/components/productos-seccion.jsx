@@ -4,13 +4,16 @@ import SimpleSlider from './slider';
 import './carrousel.css';
 
 const Producto = (props) => {
+  const base64String = btoa(String.fromCharCode(...new Uint8Array(props.img)));
+
+
     return (
-        <a href='#' className='card'>
+        <a href='#' className='card' key={props.i}>
             <div className='card-hover-info'>
                 <p>{props.descripcion}</p>
             </div>
             <div className='card-img-container'>
-                <img className='card-img' src={require(`../imgs/${props.img}`)} alt="productoimg" />
+                <img className='card-img' src={`data:image/jpeg;base64,${base64String}`} alt="productoimg" />
             </div>
             <div className='card-info-container'>
                 <h3>${props.precio}</h3>
@@ -27,7 +30,8 @@ const Productos = () => {
 
     useEffect(() => {
         const fetchProductos = async () => {
-            let data = await axios.get('http://192.168.0.167:5000');
+            let data = await axios.get('http://192.168.0.167:5000/todas-categorias');
+            console.log(data.data)
             setProductos(data.data);
         }
         fetchProductos();
@@ -68,9 +72,9 @@ const Productos = () => {
     
     return (
         <div className='productos-seccion'>
-            {productos && productos.map(categorias => { 
+            {productos && productos.map((categorias, i) => { 
                 return (
-                    <div className='categoria-container'>
+                    <div className='categoria-container' key={i}>
                         <div className='categoria-titulo-container'>
                             <h3 className='categoria-titulo'>{categorias['categoria']}</h3>
                             <a href="#">Ver más</a>
@@ -86,8 +90,8 @@ const Productos = () => {
                                 ulclass='cards-slider-ul' 
                                 responsive={responsiveSlider}
                         >
-                            {categorias['productos'].map(producto => {
-                                return <Producto descripcion={producto.descripcion} nombre={producto.producto} img={producto.img} precio={producto.precio} />
+                            {categorias['productos'].map((producto, j) => {
+                                return <Producto i={j} descripcion={producto.descripcion} nombre={producto.producto} img={producto.imagenes.data} precio={producto.precio} />
                             })}
 
                         </SimpleSlider>
