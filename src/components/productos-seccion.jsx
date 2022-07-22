@@ -2,13 +2,14 @@ import './productos-seccion.css';
 import React, { useState, useEffect } from 'react';
 import SimpleSlider from './slider';
 import './carrousel.css';
+import {Link} from 'react-router-dom';
 
 const Producto = (props) => {
   const base64String = btoa(String.fromCharCode(...new Uint8Array(props.img)));
 
 
     return (
-        <a href='#' className='card' key={props.i}>
+        <Link to={props.id} className='card' key={props.i}>
             <div className='card-hover-info'>
                 <p>{props.descripcion}</p>
             </div>
@@ -19,7 +20,7 @@ const Producto = (props) => {
                 <h3>${props.precio}</h3>
                 <p>{props.nombre}</p>
             </div>
-        </a>
+        </Link>
     )
 }
 
@@ -91,7 +92,7 @@ const Productos = () => {
                                 responsive={responsiveSlider}
                         >
                             {categorias['productos'].map((producto, j) => {
-                                return <Producto i={j} descripcion={producto.descripcion} nombre={producto.producto} img={producto.imagenes.data} precio={producto.precio} />
+                                return <Producto i={j} id={producto._id} descripcion={producto.descripcion} nombre={producto.producto} img={producto.imagenes.data} precio={producto.precio} />
                             })}
 
                         </SimpleSlider>
