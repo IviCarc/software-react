@@ -2,7 +2,9 @@
     margin: 40px auto;
     width:70%;
     padding: 10px;
-    background-color: aliceblue;
+    background-color: rgb(236, 236, 236);
+    box-shadow: rgba(68, 65, 65, 0.24) 0px 3px 8px;
+
 }
 
 .new-product-form {

@@ -31,7 +31,7 @@ const Productos = () => {
 
     useEffect(() => {
         const fetchProductos = async () => {
-            let data = await axios.get('http://192.168.0.167:5000/todas-categorias');
+            let data = await axios.get('http://localhost:5000/todas-categorias');
             console.log(data.data)
             setProductos(data.data);
         }

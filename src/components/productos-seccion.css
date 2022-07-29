@@ -2,8 +2,6 @@
     box-sizing: border-box;
 }
 
-
-
 .productos-seccion {
     margin: 50px auto;
     width: 90%;
@@ -47,7 +45,7 @@
     margin: 10px;
     text-decoration: none;
     color: black;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(68, 65, 65, 0.24) 0px 3px 8px;
     position: relative;
     overflow: hidden;
     height: 300px;

@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from './components/header';
 import Footer from './components/footer';
 import AdminPage from './components/admin';
+import ProductPage from './components/product-page';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
