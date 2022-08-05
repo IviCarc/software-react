@@ -63,8 +63,10 @@ const Productos = () => {
         {
           breakpoint: 600 ,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            vertical:true,
+            // adaptiveHeight:true
           }
         }
       ]

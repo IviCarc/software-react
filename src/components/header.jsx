@@ -2,6 +2,7 @@ import './header.css'
 import { ReactComponent as CarritoLogo } from '../svgs/cart.svg';
 import { ReactComponent as BusquedaLogo } from '../svgs/magnifying-glass-solid.svg';
 import {Link} from 'react-router-dom';
+import {ReactComponent as BarImg} from '../svgs/bars-solid.svg';
 
 const Header = () => {
 
@@ -31,7 +32,8 @@ const Header = () => {
                     </li>
                     <li id="search-container">
                         <div className="responsive-nav-container">
-                            <img src={require("../svgs/bars-solid.svg")} alt="" />
+                            <BarImg onClick={() => document.querySelector('.header-items-container').classList.toggle('active')}/>
+                            {/* <img src={require("../svgs/bars-solid.svg")} alt="" /> */}
                         </div>
                         <div className="search-bar-container">
                             <select name="categorias" id="categorias">
@@ -49,9 +51,9 @@ const Header = () => {
                         </div>
                     </li>
                     <div className="header-items-container">
-                        <li id="inicio"><Link to={'/'}>Inicio</Link></li>
-                        <li id="ingresar"><Link to="htmls/ingresar.html">Ingresar</Link></li>
-                        <li id="carrito"><Link to="htmls/carrito.html"><CarritoLogo className='cart-icon' /></Link>
+                        <li id="inicio"><Link className='header-link' to={'/'}>Inicio</Link></li>
+                        <li id="ingresar"><Link className='header-link' to="htmls/ingresar.html">Ingresar</Link></li>
+                        <li id="carrito"><Link className='header-link' to="htmls/carrito.html"><CarritoLogo className='cart-icon' /></Link>
                         </li>
                     </div>
                 </ul>
