@@ -13,23 +13,32 @@ const ProductPage = (props) => {
             const data = await axios.get('http://localhost:5000/get' + location.pathname);
             setProducto(data.data);
             console.log(data.data)
-        } 
+        }
         fetchProducto();
     }
-        ,[])
+        , [])
 
     return (
         <div className='product-page'>
             {
                 producto &&
                 <div>
-                    <h1>{producto.producto}</h1>
+                    <div className='main-info-container'>
+                        {/* // SOLO RENDERIZA UNA IMAGEN // */}
+                        <div className='main-img'>
+                            <img className='product-img' src={
+                                `data:image/jpeg;base64,${btoa(String.fromCharCode(...new Uint8Array(producto.imagenes.data)))}`
+                            } alt="" />
+                        </div>
+                        <div className='main-info'>
+                            <h1>{producto.producto}</h1>
 
-                    {/* // SOLO RENDERIZA UNA IMAGEN // */}
-                    <img className='product-img' src={
-                        `data:image/jpeg;base64,${btoa(String.fromCharCode(...new Uint8Array(producto.imagenes.data)))}`
-                    } alt="" />
-                    <h3>{producto.descripcion}</h3>
+                            <h3>{producto.descripcion}</h3>
+
+                            <p>${producto.precio}</p>
+                        </div>
+
+                    </div>
                 </div>
             }
         </div>

@@ -9,3 +9,8 @@
 .product-img {
     width: 300px;
 }
+
+.main-info-container     {
+    display: flex;
+    	justify-content: space-around;
+}

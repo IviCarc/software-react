@@ -5,8 +5,7 @@ import './carrousel.css';
 import {Link} from 'react-router-dom';
 
 const Producto = (props) => {
-  const base64String = btoa(String.fromCharCode(...new Uint8Array(props.img)));
-
+    const base64String = btoa(String.fromCharCode(...new Uint8Array(props.img)));
 
     return (
         <Link to={props.id} className='card' key={props.i}>
