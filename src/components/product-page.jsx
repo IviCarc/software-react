@@ -6,7 +6,6 @@ import './product-page.css'
 const ProductPage = (props) => {
     const [producto, setProducto] = useState(null);
     const location = useLocation();
-    console.log(location.pathname)
 
     useEffect(() => {
         const fetchProducto = async () => {
@@ -36,6 +35,9 @@ const ProductPage = (props) => {
                             <h3>{producto.descripcion}</h3>
 
                             <p>${producto.precio}</p>
+
+                            <p>Unidades disponibles: {producto.cantidadDisponible}</p>
+
                         </div>
 
                     </div>
