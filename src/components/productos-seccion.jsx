@@ -4,7 +4,7 @@ import SimpleSlider from './slider';
 import './carrousel.css';
 import {Link} from 'react-router-dom';
 
-const Producto = (props) => {
+const Producto = (props) => { 
     const base64String = btoa(String.fromCharCode(...new Uint8Array(props.img)));
 
     return (

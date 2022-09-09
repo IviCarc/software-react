@@ -11,6 +11,7 @@ const NuevoProducto = (props) => {
         descripcion: { value: "", valid: false },
         precio: { value: "", valid: false },
         categoria: { value: "", valid: false },
+        subCategoria: { value: "", valid: false },
         cantidadDisponible: { value: "", valid: false },
         imagenes: { value: "", valid: false },
     });
@@ -74,6 +75,7 @@ const NuevaCategoria = (props) => {
 const AdminPage = () => {
 
     // [nuevoProducto, nuevaCategoria, editarProducto]
+    
     const [modo, setModo] = useState([true, false, false]);
     const [listaCategorias, setListaCategorias] = useState(null);
 
@@ -107,7 +109,6 @@ const AdminPage = () => {
             });
         }
     };
-
 
     const cambiarModo = (e) => {
         obtenerCategorias();
